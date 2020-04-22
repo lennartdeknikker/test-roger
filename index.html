@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<style>
-  
-</style>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .file-upload {
+      display: none;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      background-color: antiquewhite;
+    }
+
+    button {
+      border: none;
+      outline: none;
+      background-color: rgb(38, 38, 163);
+      color: white;
+      font-weight: bold;
+      font-size: 2em;
+      width: 20rem;
+      height: 20rem;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <input type="file" class="file-upload" />
+    <button>
+      KIES EEN EXCEL BESTAND
+    </button>
+    <script>
+      const button = document.querySelector("button")
+      const uploadButton = document.querySelector(".file-upload")
+
+      button.addEventListener("click", triggerUpload)
+
+      function triggerUpload() {
+        uploadButton.click()
+      }
+    </script>
+  </body>
 </html>
